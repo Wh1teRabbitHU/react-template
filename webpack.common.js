@@ -5,7 +5,7 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { __dirname, packageJson } from './node-env.js';
 
 export default {
-	entry: './src/react/main.jsx',
+	entry: './src/react/main.tsx',
 	resolve: {
 		extensions: [ '.js', '.jsx' ]
 	},
@@ -16,6 +16,11 @@ export default {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
+			},
 			{
 				test: /\.(js|jsx)$/,
 				use: [ 'babel-loader' ],

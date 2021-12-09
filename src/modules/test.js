@@ -1,4 +1,4 @@
 
-export function test() {
+export function helloWorld() {
 	console.log('Hello world!');
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { test } from '../modules/test';
+import { helloWorld } from '../modules/test';
 
 import './vendor.scss';
 import './main.scss';
 
 const Main = () => {
-	test();
+	helloWorld();
 
 	return (
 		<div>Application loaded</div>
