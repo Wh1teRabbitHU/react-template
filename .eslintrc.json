@@ -23,14 +23,34 @@
 			"jsx": true
 		},
 		"ecmaVersion": 12,
-		"sourceType": "module"
+		"sourceType": "module",
+    "project": "./tsconfig.json"
 	},
   "rules": {
 
     // React - Jsx
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "@typescript-eslint/no-unused-vars": "error",
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+
+    // Typescript
+    "@typescript-eslint/adjacent-overload-signatures": 1,
+    "@typescript-eslint/array-type": [ 2, {
+      "default": "array",
+      "readonly": "array"
+    }],
+    "@typescript-eslint/await-thenable": 2,
+    "@typescript-eslint/ban-ts-comment": [ 2, {
+      "ts-expect-error": false,
+      "ts-ignore": false,
+      "ts-nocheck": false,
+      "ts-check": false,
+      "minimumDescriptionLength": 3
+    }],
+    "@typescript-eslint/class-literal-property-style": [ 2, "fields" ],
+    "@typescript-eslint/consistent-indexed-object-style": [ 2, "record" ],
+
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/no-explicit-any": 2,
 
     // Possible Errors
 
