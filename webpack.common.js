@@ -11,7 +11,7 @@ export default {
 	},
 	output: {
 		filename: `${packageJson.name}-${packageJson.version}.bundle.js`,
-		path: path.resolve(__dirname, '../public'),
+		path: path.resolve(__dirname, './build'),
 		clean: true
 	},
 	module: {
