@@ -1,17 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
-import { helloWorld } from '../modules/test';
+import { helloWorld } from '../modules/simple';
 
-import './vendor.scss';
 import './main.scss';
+import './vendor.scss';
 
 const Main = () => {
 	helloWorld();
 
-	return (
-		<div>Application loaded</div>
-	);
+	return <div>Application loaded</div>;
 };
 
-ReactDOM.render(<Main />, document.querySelector('#application-root'));
+const reactContainer = document.querySelector('#application-container');
+
+if (reactContainer === null) {
+	console.error('Unknown container selector!');
+} else {
+	const root = createRoot(reactContainer);
+
+	root.render(<Main />);
+}
